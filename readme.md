@@ -14,6 +14,8 @@
     * Setup automated build flow
     * Be able to create apps using Angular 2 and build a foundation for continued learning
 
+[https://code.visualstudio.com/](https://code.visualstudio.com/)
+
 ####Instructor Contact Info
 
 Name: Lenny Urbanowski
