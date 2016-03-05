@@ -36,9 +36,26 @@ var app;
             function Person(first, last) {
                 this.first = first;
                 this.last = last;
+                this.pets = [];
             }
             Person.prototype.getFullName = function () {
                 return this.first + " " + this.last;
+            };
+            Person.prototype.addPet = function (pet) {
+                this.pets.push(pet);
+            };
+            Person.prototype.getPets = function () {
+                return this.pets;
+            };
+            Person.prototype.removePet = function (pet) {
+                // this.pets = this.pets.filter(function(p){ return p !== pet; });
+                // this.pets = this.pets.filter(  (p) => { return p !== pet; }  );
+                this.pets = this.pets.filter(function (p) { return p !== pet; });
+                return pet;
+            };
+            Person.prototype.givePet = function (pet, to) {
+                this.removePet(pet);
+                to.addPet(pet);
             };
             return Person;
         }());
@@ -53,11 +70,20 @@ var app;
     var p = new Person("Lenny", "Urbanowski");
     console.log(p);
     console.log(p.getFullName());
-    var p = new Person("Jane", "Doe");
-    console.log(p);
-    console.log(p.getFullName());
+    var p2 = new Person("Jane", "Doe");
+    console.log(p2);
+    console.log(p2.getFullName());
     var pet = new Pet("Fido");
     pet.age = 5;
     pet.setStatus(app.models.PetStatus.Good);
-    console.log(pet);
+    p.addPet(pet);
+    p.addPet(new Pet("Pet2"));
+    console.log(p);
+    pet.age = 12;
+    console.log(p.getPets());
+    console.log(p2.getPets());
+    // p.removePet(pet);
+    p.givePet(pet, p2);
+    console.log(p.getPets());
+    console.log(p2.getPets());
 })(app || (app = {}));

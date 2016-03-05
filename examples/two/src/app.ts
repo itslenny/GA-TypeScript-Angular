@@ -8,13 +8,26 @@ module app {
     console.log(p);
     console.log(p.getFullName());
     
-    var p = new Person("Jane", "Doe");
-    console.log(p);
-    console.log(p.getFullName());
+    var p2 = new Person("Jane", "Doe");
+    console.log(p2);
+    console.log(p2.getFullName());
     
     var pet = new Pet("Fido");
     pet.age = 5;
     pet.setStatus(models.PetStatus.Good);
     
-    console.log(pet);
+    p.addPet(pet);
+    p.addPet(new Pet("Pet2"));
+    
+    console.log(p);
+    
+    pet.age = 12;
+    
+    console.log(p.getPets());
+    console.log(p2.getPets());
+    // p.removePet(pet);
+    p.givePet(pet, p2);
+    console.log(p.getPets());
+    console.log(p2.getPets());
+    
 }
