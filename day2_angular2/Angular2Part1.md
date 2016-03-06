@@ -26,13 +26,13 @@ Next we make a directory and create a project
 
 ```
 mkdir myproject
+cd myproject
 slush angular2-ts
 ```
 
 This will create all the files we need to get started. We just use `npm start` to start the project.
 
 ```
-cd myproject
 npm start
 ```
 
