@@ -4,7 +4,7 @@
 
 ####Objectives
 
-* Day 1
+* [Day 1](day1_typescript)
     * Install typescript compiler and tools
     * Understand basics of TypeScript Language
     * Understand Object Oriented modeling with TypeScript
