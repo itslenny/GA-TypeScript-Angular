@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-sm-4">
+        <h1>This is my angular app!!!</h1>
+        <p>multi-line strings are cool</p>
+        <p>Name: {{name}}</p>
+        <input (keydown)="keyup($event)" type="text" [(ngModel)]="name">
+        <form>
+            
+        <input #inputbox type="email" [value]="name" [style.width.%]="name" ngControl="name" #inputProps="ngForm" required>
+        </form>
+        <div>
+            {{inputbox.value}}
+            {{inputProps.valid}}
+        </div>
+        <button [ngClass]="{'btn-primary':buttonActive}">My Button</button>
+        <button (click)="toggleButton()" [disabled]="false" [ngStyle]="{'color':'red','background-color':'yellow'}">My Button</button>
+    </div>
+    <div class="col-sm-4" (mousemove)="onMousemove($event)">
+        <ul>
+            <li *ngFor="#person of people; #i = index">
+                {{i + 1}} - {{person.first}} {{person.last}}
+            </li>
+        </ul>
+    </div>    
+</div>
