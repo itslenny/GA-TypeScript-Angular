@@ -1,4 +1,4 @@
-System.register(["angular2/core"], function(exports_1, context_1) {
+System.register(["angular2/core", "./todo/TodoList"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,12 +10,15 @@ System.register(["angular2/core"], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, TodoList_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (TodoList_1_1) {
+                TodoList_1 = TodoList_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -23,6 +26,7 @@ System.register(["angular2/core"], function(exports_1, context_1) {
                     this.name = "Lenny";
                     this.buttonActive = false;
                     this.people = [];
+                    // debugger;
                     this.people.push({ first: "Jane", last: "Doe" });
                     this.people.push({ first: "John", last: "Doe" });
                     console.log('loaded');
@@ -47,7 +51,8 @@ System.register(["angular2/core"], function(exports_1, context_1) {
                         ],
                         styleUrls: [
                             'css/main.css'
-                        ]
+                        ],
+                        directives: [TodoList_1.TodoListComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

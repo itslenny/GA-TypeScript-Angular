@@ -1,4 +1,5 @@
 import {Component} from "angular2/core";
+import {TodoListComponent} from "./todo/TodoList"
 
 interface Person {
     first: string;
@@ -13,7 +14,8 @@ interface Person {
     ],
     styleUrls: [
         'css/main.css'
-    ]
+    ],
+    directives:[TodoListComponent]
 })
 export class AppComponent {
     
@@ -25,6 +27,7 @@ export class AppComponent {
         this.name="Lenny";
         this.buttonActive = false;
         this.people = [];
+        // debugger;
         this.people.push({first:"Jane", last:"Doe"});
         this.people.push({first:"John", last:"Doe"});
         console.log('loaded');
