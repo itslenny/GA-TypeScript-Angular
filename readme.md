@@ -9,7 +9,7 @@
     * Understand basics of TypeScript Language
     * Understand Object Oriented modeling with TypeScript
     * Setup automated build flow
-* Day 2
+* [Day 2](day2_angular2)
     * Install Angular 2
     * Setup automated build flow
     * Be able to create apps using Angular 2 and build a foundation for continued learning
